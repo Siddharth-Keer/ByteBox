@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  --background: #1A1A1A;
+  --foreground: #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: gray; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(98, 97, 97); 
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.remove-scrollbar::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+  border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar-track{
+  background: transparent;
+}
+
+.remove-scrollbar::-webkit-scrollbar-thumb{
+  background: transparent;
+  border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar-thumb:hover{
+  background: transparent;
+}
+
+.gradient-bg{
+  background: linear-gradient(135deg, #800080, #B266B2);
+}
+
+.gradient-bg2{
+  background: linear-gradient(135deg, #800080, #6699FF);
+}
+
+.typing {
+  width: 11ch;                     
+  white-space: nowrap;              
+  overflow: hidden;
+  animation: typing 1s steps(20) infinite alternate-reverse;
+}
+
+@keyframes typing {
+  from { width: 8ch; }
+  to   { width: 11ch; }
+}
